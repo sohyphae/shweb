@@ -1,4 +1,49 @@
-#root {
+/* Background */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/src/assets/treebg1.jpeg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.logo h1 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+  font-size: 8em;
+  margin: 0;
+  line-height: 0.9;
+  text-align: center;
+  color: #d8d5cd;
+}
+
+span {
+  display: inline-block;
+  width: 0.8em;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 5em;
+  }
+}
+
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +84,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
