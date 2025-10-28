@@ -9,7 +9,9 @@ const About: React.FC = () => {
           <h2 className="section-header text-mid-dark">About</h2>
           <p className="body-text text-dark">Sophie Hyphae weaves glimmering synth and piano improvisations with ethereal vocal loops, to create dreamlike, nature-entangled songs. Synth chef for The Mixed Dips</p>
         </div>
-        <img src={cge1} className="about-img" alt="Sophie Hyphae on a sunlit treetop stage" />
+        <div className="about-img-container">
+          <img src={cge1} className="about-img" alt="Sophie Hyphae on a sunlit treetop stage" />
+        </div>
       </div>
     </section>
   );
