@@ -1,6 +1,4 @@
 import React from 'react';
-import hhvid from '../assets/hammer-hearted-sqr.mp4';
-import cgevid from '../assets/common-garden-energy-short.mp4';
 import shamb1 from '../assets/shambala.jpg';
 
 const Media: React.FC = () => {
@@ -8,13 +6,18 @@ const Media: React.FC = () => {
     <section id="media" className="section section-dark">
       <h2 className="section-header text-light margin-top-20vh">Media</h2>
       <div className="video-container">
-       {/* <video controls width="250"> */}
-       <video controls> 
-          <source src={cgevid} type="video/webm" />
-        </video>
-        <video controls> 
-          <source src={hhvid} type="video/webm" />
-        </video>
+        <iframe 
+          className="vertical-video" 
+          src="https://www.youtube.com/embed/b_kp38jqi8Q" 
+          title="YouTube video player" frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+        <div className="horizontal-video-wrapper">
+          <iframe className="horizontal-video" src="https://www.youtube.com/embed/NReyLj_dGN8?si=RoSzeOBOyxSQ4x-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe className="horizontal-video" src="https://www.youtube.com/embed/gpwFDJ-2zmA?si=ibig8rQd3lQXG4db" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       </div>
       <div className="image-container">
         <img src={shamb1} alt="" />
