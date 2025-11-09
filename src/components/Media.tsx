@@ -1,5 +1,13 @@
 import React from 'react';
 import shamb1 from '../assets/shambala.jpg';
+import shamb2 from '../assets/shambala2.jpg';
+import shamb3 from '../assets/shambala3.jpg';
+import physic from '../assets/physic-garden.jpg';
+import cgeS from '../assets/cge-sp-synth.png';
+import pianoJungle from '../assets/pianojungle.jpg';
+import smoky from '../assets/smokytentacles.jpg';
+import glns from '../assets/glns.jpg';
+import may4th from '../assets/may4th.png';
 
 const Media: React.FC = () => {
   return (
@@ -20,12 +28,15 @@ const Media: React.FC = () => {
         </div>
       </div>
       <div className="image-container">
+        <img src={shamb2} alt="" />
+        <img src={physic} alt="" />
+        <img src={pianoJungle} alt="" />
+        <img src={cgeS} alt="" />
+        <img src={shamb3} alt="" />
+        <img src={smoky} alt="" />
         <img src={shamb1} alt="" />
-        <img src={shamb1} alt="" />
-        <img src={shamb1} alt="" />
-        <img src={shamb1} alt="" />
-        <img src={shamb1} alt="" />
-        <img src={shamb1} alt="" />
+        <img src={may4th} alt="" />
+        <img src={glns} className="odd-img" alt="" />
       </div>
     </section>
   );
