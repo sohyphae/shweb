@@ -8,7 +8,6 @@ import Media from './components/Media';
 function App() {
   return (
     <>
-      
       <Background />
       <Header />
       <About />
