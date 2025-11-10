@@ -76,7 +76,7 @@ body {
 /* Header */
 
 .header {
-  border: 1px green solid;
+  /* border: 1px green solid; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,14 +84,15 @@ body {
 }
 
 #canvas {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   position: absolute;
   width: 100vw;
   height: 100vh;
 }
 
 .logo h1 {
-  border: 1px blue solid;
+  /* z-index: 3; */
+  /* border: 1px blue solid; */
   font-family: 'Work Sans', sans-serif;
   font-weight: 100;
   font-size: 8em;
@@ -103,19 +104,19 @@ body {
   background: linear-gradient(
     to right,
     #785f50 0%,
-    #fff5f5 18%,
-    #785f50 36%
+    #fff5f5 50%,
+    #785f50 90%
   );
 
   -webkit-background-clip: text;
   color: transparent;
-  background-position: -20vw;
+  background-position: -40vw;
   animation: shineText 4000ms infinite;
 }
 
 @keyframes shineText {
   to {
-    background-position: 120vw;
+    background-position: 140vw;
   }
 }
 

@@ -4,7 +4,7 @@ const ClusterGrowth: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    // Cluster animation by kirupa: https://github.com/kirupa/kirupa/tree/master
+    // Based on kirupa's cluster animation: https://github.com/kirupa/kirupa/tree/master
 
     const myCanvas = canvasRef.current;
     if (!myCanvas) return;
@@ -12,10 +12,9 @@ const ClusterGrowth: React.FC = () => {
     const ctx = myCanvas.getContext('2d');
     if (!ctx) return;
 
+    const cellDuration = 4000; // 2 seconds in milliseconds
+
     // Configuration variables
-    let drawCount = 0;
-    let activeCells = 0;
-    let iterations = 0;
     let cellSize = 5; // Size of each cell in pixels
     let gap = -4; // Size of the gap between cells in pixels
     let totalOffset = cellSize + gap;
@@ -23,19 +22,10 @@ const ClusterGrowth: React.FC = () => {
     // Calculate the grid dimensions based on canvas size and cell size
     let width = Math.floor(myCanvas.width / totalOffset);
     let height = Math.floor(myCanvas.height / totalOffset);
-    let totalCells = (width - 1) * (height - 1);
 
     // Create an empty grid to start with
     let tempGrid: number[][] = createEmptyGrid();
-    let growthProbability = customRandom(0.05, 0.2); // Set initial growth probability
-
-    // Array of dark colors for the clusters
-    const dark_colors = [
-         "#ffffff01", // Almost transparent white
-    ];
-
-    // Select a random color for the current iteration
-    let color = getRandomColor(dark_colors);
+    let growthProbability = customRandom(0.0, 0.3); // Set initial growth probability
 
     // Function to create an empty grid filled with zeros
     function createEmptyGrid(): number[][] {
@@ -52,90 +42,75 @@ const ClusterGrowth: React.FC = () => {
 
     // Function to set the initial cluster of active cells
     function setInitialCluster(x: number, y: number, size: number) {
-      let newCells: number[][] = [];
-
+      const now = Date.now();
       for (let i = x - size; i < x + size; i++) {
         for (let j = y - size; j < y + size; j++) {
           if (i >= 0 && i < width && j >= 0 && j < height) {
-            tempGrid[i][j] = 1;
-            newCells.push([i, j]);
-            activeCells++;
+            tempGrid[i][j] = now;
           }
         }
       }
-
-      // Draw only the new cells
-      newCells.forEach(([x, y]) => drawCell(x, y));
     }
 
-    // Function to draw the current state of the grid
+    // Function to draw a single cell
     function drawCell(x: number, y: number) {
-      ctx.fillStyle = color;
-
+      ctx.fillStyle = "#df4f2801";
       let xPos = Math.round(x * totalOffset - cellSize / 2);
       let yPos = Math.round(y * totalOffset - cellSize / 2)
       ctx.fillRect(xPos, yPos, cellSize, cellSize);
     }
 
-    // Function to update the grid based on growth rules
+    // Function to update the grid based on growth and expiration rules
     function updateGrid() {
-      let newCells: number[][] = [];
+      const now = Date.now();
+      let updatedGrid = createEmptyGrid();
 
-      let updatedGrid = createEmptyGrid(); // Create a new empty grid
+      for (let i = 1; i < width - 1; i++) {
+        for (let j = 1; j < height - 1; j++) {
+          const cellValue = tempGrid[i][j];
 
-      // Iterate through each cell in the grid
-      for (let i = 1; i < tempGrid.length - 1; i++) {
-        for (let j = 1; j < tempGrid[0].length - 1; j++) {
-          if (tempGrid[i][j] === 0) {
-            let neighbors = countNeighbors(tempGrid, i, j); // Count the number of neighboring cells
-
-            if (neighbors > 0) {
-              if (growthProbability > Math.random()) {
-                newCells.push([i, j]);
-                updatedGrid[i][j] = 1; // Grow a new cell
-                activeCells++;
-              }
+          if (cellValue === 0) { // Inactive cell
+            let neighbors = countNeighbors(tempGrid, i, j);
+            if (neighbors > 0 && growthProbability > Math.random()) {
+              updatedGrid[i][j] = now; // New cell is born
             }
-          } else {
-            updatedGrid[i][j] = tempGrid[i][j]; // Keep the existing cell
+          } else { // Active cell
+            if (now - cellValue > cellDuration) {
+              // Cell is old, make it transparent (inactive)
+              updatedGrid[i][j] = 0;
+            } else {
+              // Cell is still alive, keep it
+              updatedGrid[i][j] = cellValue;
+            }
           }
         }
       }
+      tempGrid = updatedGrid;
+    }
 
-      // Draw only the new cells
-      newCells.forEach(([x, y]) => drawCell(x, y));
-
-      tempGrid = updatedGrid; // Update the grid
+    // Function to draw all active cells
+    function drawGrid() {
+      ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+      for (let i = 0; i < width; i++) {
+        for (let j = 0; j < height; j++) {
+          if (tempGrid[i][j] > 0) {
+            drawCell(i, j);
+          }
+        }
+      }
     }
 
     // Function to count the number of active neighboring cells
     function countNeighbors(grid: number[][], x: number, y: number): number {
-      let sum = 0;
+      let count = 0;
       for (let i = -1; i <= 1; i++) {
         for (let j = -1; j <= 1; j++) {
-          sum += grid[x + i][y + j]; // Sum the values of the neighboring cells
+          if (grid[x + i][y + j] > 0) {
+            count++;
+          }
         }
       }
-      return sum;
-    }
-
-    // Function to reset the animation
-    function reset() {
-      activeCells = 0;
-      tempGrid = createEmptyGrid();
-      growthProbability = customRandom(0.05, 0.2); // Set new growth probability
-
-      // Alternate between colored and white clusters
-      if (iterations % 2 !== 0) {
-        color = getRandomColor(dark_colors);
-      } else {
-        color = "ffffff00";
-      }
-
-      setInitialCluster(Math.ceil(width / 2), Math.ceil(height / 2), 2);
-
-      iterations++;
-      drawCount = 0;
+      return count;
     }
 
     // Set the initial cluster in the center of the grid
@@ -144,24 +119,13 @@ const ClusterGrowth: React.FC = () => {
     let animationFrameId: number;
     // Main animation function
     function growClusters() {
-      drawCount++;
       updateGrid();
-
-      // Reset if the entire grid is filled
-      if (activeCells >= totalCells) {
-        reset();
-      }
-
+      drawGrid();
       animationFrameId = requestAnimationFrame(growClusters);
     }
 
     // Start the animation
     growClusters();
-
-    // Utility function to get a random color from the array
-    function getRandomColor(colors: string[]): string {
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
 
     // Utility function to generate a random number within a range
     function customRandom(min: number, max: number): number {
@@ -179,5 +143,4 @@ const ClusterGrowth: React.FC = () => {
 };
 
 export default ClusterGrowth;
-
 
