@@ -6,37 +6,45 @@ import physic from '../assets/physic-garden.jpg';
 import cgeS from '../assets/cge-sp-synth.png';
 import pianoJungle from '../assets/pianojungle.jpg';
 import smoky from '../assets/smokytentacles.jpg';
-import glns from '../assets/glns.jpg';
+import zb from '../assets/zbdy-w.jpeg';
 import may4th from '../assets/may4th.png';
 
 const Media: React.FC = () => {
   return (
     <section id="media" className="section section-dark">
       <h2 className="section-header text-light margin-top-20vh">Media</h2>
-      <div className="video-container">
-        <iframe 
-          className="vertical-video" 
-          src="https://www.youtube.com/embed/b_kp38jqi8Q" 
-          title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-          referrerpolicy="strict-origin-when-cross-origin" 
-          allowfullscreen>
-        </iframe>
-        <div className="horizontal-video-wrapper">
+        <div className="video-wrapper">
+          <iframe 
+            className="vertical-video" 
+            src="https://www.youtube.com/embed/b_kp38jqi8Q" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <iframe 
+            className="vertical-video" 
+            src="https://www.youtube.com/embed/zRQJjN4cHiM" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div className="video-wrapper">
           <iframe className="horizontal-video" src="https://www.youtube.com/embed/NReyLj_dGN8?si=RoSzeOBOyxSQ4x-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <iframe className="horizontal-video" src="https://www.youtube.com/embed/gpwFDJ-2zmA?si=ibig8rQd3lQXG4db" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-      </div>
       <div className="image-container">
         <img src={shamb2} alt="" />
         <img src={physic} alt="" />
         <img src={pianoJungle} alt="" />
         <img src={cgeS} alt="" />
+        <img src={zb} alt="" />
         <img src={shamb3} alt="" />
-        <img src={smoky} alt="" />
         <img src={shamb1} alt="" />
-        <img src={may4th} alt="" />
-        <img src={glns} className="odd-img" alt="" />
+        <img src={smoky} alt="" />
+        <img src={may4th} className="odd-img" alt="" />
       </div>
     </section>
   );
