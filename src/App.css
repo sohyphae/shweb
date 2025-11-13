@@ -1,5 +1,6 @@
 body {
   margin: 0 auto;
+  position: relative;
 }
 
 /* Background */
@@ -206,6 +207,21 @@ span {
 
 .image-container img {
   width: 33vw;
+  /* display: block; */
+}
+
+.caption-container {
+  position: relative;
+  display: inline-block;
+}
+
+.caption {
+  position: absolute;
+  top: 90%;
+  right: 5%;
+  color: white;
+  background-color: #4d1313;
+  font-weight: bold;
 }
 
 @media (max-width: 1500px) {
@@ -253,7 +269,16 @@ span {
 .body-text {
   font-family: 'Work Sans', sans-serif;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.2em;
+}
+
+.animation-attr {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  color: #c08b7b;
+  position: absolute;
+  bottom: 0;
 }
 
 .text-light {

@@ -36,13 +36,22 @@ const Media: React.FC = () => {
           <iframe className="horizontal-video" src="https://www.youtube.com/embed/gpwFDJ-2zmA?si=ibig8rQd3lQXG4db" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       <div className="image-container">
-        <img src={shamb2} alt="" />
-        <img src={physic} alt="" />
+        <div className="caption-container">
+          <img src={shamb2} alt="" />
+          <p className="caption">Shambala Festival 2025, photo: Jana Rumley</p>
+        </div>
+        <div className="caption-container">
+          <img src={physic} alt="" />
+          <p className="caption">Chelsea Physic Garden Summer Lates</p>
+        </div>
         <img src={pianoJungle} alt="" />
         <img src={cgeS} alt="" />
         <img src={zb} alt="" />
         <img src={shamb3} alt="" />
-        <img src={shamb1} alt="" />
+        <div className="caption-container">
+          <img src={shamb1} alt="" />
+          <p className="caption">Shambala Festival 2025, photo: Jana Rumley</p>
+        </div>
         <img src={smoky} alt="" />
         <img src={may4th} className="odd-img" alt="" />
       </div>

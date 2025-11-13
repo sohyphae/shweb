@@ -18,6 +18,9 @@ const Contact: React.FC = () => {
           <a href="https://www.youtube.com/@sohyphae" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
         </p>
       </div>
+      <p 
+        className="animation-attr">Header section cluster animation based on <a href="https://github.com/kirupa/kirupa/tree/master" target="_blank" rel="noopener noreferrer" >kirupa</a>
+      </p>
     </section>
   );
 };
