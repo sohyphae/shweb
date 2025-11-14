@@ -33,7 +33,7 @@ export default function ResponsiveAppBar() {
       position="sticky" 
       sx={{ 
         background: '#ffffff00',
-        backdropFilter: 'blur(8px)',
+        backdropFilter: 'blur(16px)',
         '&::after': {
           content: '""',
           position: 'absolute',

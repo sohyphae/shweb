@@ -12,7 +12,7 @@ import may4th from '../assets/may4th.png';
 const Media: React.FC = () => {
   return (
     <section id="media" className="section section-dark">
-      <h2 className="section-header text-light margin-top-20vh">Media</h2>
+      <h2 className="section-header text-mid-light margin-top-20vh padding-bottom-10vh">Media</h2>
         <div className="video-wrapper">
           <iframe 
             className="vertical-video" 
@@ -38,11 +38,11 @@ const Media: React.FC = () => {
       <div className="image-container">
         <div className="caption-container">
           <img src={shamb2} alt="" />
-          <p className="caption">Shambala Festival 2025, photo: Jana Rumley</p>
+          <p className="caption text-light">Shambala Festival 2025, photo: Jana Rumley</p>
         </div>
         <div className="caption-container">
           <img src={physic} alt="" />
-          <p className="caption">Chelsea Physic Garden Summer Lates</p>
+          <p className="caption text-light">Chelsea Physic Garden Summer Lates</p>
         </div>
         <img src={pianoJungle} alt="" />
         <img src={cgeS} alt="" />
@@ -50,7 +50,7 @@ const Media: React.FC = () => {
         <img src={shamb3} alt="" />
         <div className="caption-container">
           <img src={shamb1} alt="" />
-          <p className="caption">Shambala Festival 2025, photo: Jana Rumley</p>
+          <p className="caption text-light">Shambala Festival 2025, photo: Jana Rumley</p>
         </div>
         <img src={smoky} alt="" />
         <img src={may4th} className="odd-img" alt="" />
