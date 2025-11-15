@@ -131,7 +131,7 @@ span {
   justify-content: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .about-container {
     flex-wrap: wrap;
     height: 200vh;
@@ -362,6 +362,14 @@ a {
 
 a:hover {
   color: #c08b7b;
+}
+
+.text-dark a {
+  color: #4d1313;
+}
+
+.text-dark a:hover {
+  color: #61342c;
 }
 
 /* Layout utilities */
