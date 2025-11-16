@@ -44,16 +44,34 @@ const Media: React.FC = () => {
           <img src={physic} alt="Sophie Hyphae at the Chelsea Physic Garden Summer Lates, playing piano improvisations and nature-entangled songs" />
           <p className="caption text-light">Chelsea Physic Garden Summer Lates</p>
         </div>
-        <img src={pianoJungle} alt="Sophie Hyphae's nature-entangled piano!" />
-        <img src={cgeS} alt="Sophie Hyphae, playing synthesizer music at a summer street party in Bristol" />
-        <img src={zb} alt="Sophie Hyphae, playing synthesizer at Bridge Farm, Bristol" />
-        <img src={shamb3} alt="Sophie Hyphae, singing and playing synth at Shambala Festival, as part of the Mixed Dips" />
+        <div className="caption-container">
+          <img src={pianoJungle} alt="Sophie Hyphae's nature-entangled piano!" />
+          <p className="caption text-light">Nature-entagled piano music in progress...</p>
+        </div>
+        <div className="caption-container">
+          <img src={cgeS} alt="Sophie Hyphae, playing synthesizer music at a summer street party in Bristol" />
+          <p className="caption text-light">A Bristol summer street party</p>
+        </div>
+        <div className="caption-container">
+          <img src={zb} alt="Sophie Hyphae, playing synthesizer at Bridge Farm, Bristol" />
+          <p className="caption text-light">Celebration at Bridge Farm</p>
+        </div>
+        <div className="caption-container">
+          <img src={shamb3} alt="Sophie Hyphae, singing and playing synth at Shambala Festival, as part of the Mixed Dips" />
+          <p className="caption text-light">Shambala Festival 2025</p>
+        </div>
         <div className="caption-container">
           <img src={shamb1} alt="Sophie Hyphae, playing synth at Shambala Festival, as part of the Mixed Dips" />
           <p className="caption text-light">Shambala Festival 2025, photo: Jana Rumley</p>
         </div>
-        <img src={smoky} alt="Sophie Hyphae live loops artist playing music at a party in the Smoky Tentacles festival tent" />
-        <img src={may4th} className="odd-img" alt="Sophie Hyphae live loops artist piano improvisations at May the Fourth Fest" />
+        <div className="caption-container">
+          <img src={smoky} alt="Sophie Hyphae live loops artist playing music at a party in the Smoky Tentacles festival tent" />
+          <p className="caption text-light">Celebration in the Smoky Tentacles</p>
+        </div>
+        <div className="caption-container">
+          <img src={may4th} className="odd-img" alt="Sophie Hyphae live loops artist piano improvisations at May the Fourth Fest" />
+          <p className="caption text-light">May the Fourth Fest</p>
+        </div>
       </div>
     </section>
   );

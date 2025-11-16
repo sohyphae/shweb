@@ -41,19 +41,21 @@ const Contact: React.FC = () => {
             <span>A</span>
         </h1>
       </div>
-      <div className="info margin-top-10vh">  
-        <p className="body-text text-light">
+      <div className="info">  
+        <p className="body-text text-light margin-top-5vh">
           But if you're not on the micelial network, here are some other ways to reach me :-)
         </p>
-        <p className="body-text text-light">
-          <a href="mailto:hello@sophiehyphae.com"><FaEnvelope /></a>
-        </p>
-        <p className="body-text text-light">
-          <a href="https://www.instagram.com/sophiehyphae" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-        </p>
-        <p className="body-text text-light">
-          <a href="https://www.youtube.com/@sohyphae" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
-        </p>
+        <div className="contact-links-container">
+          <p className="body-text text-light">
+            <a href="mailto:info@sophiehyphae.com"><FaEnvelope /></a>
+          </p>
+          <p className="body-text text-light">
+            <a href="https://www.instagram.com/sophiehyphae" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+          </p>
+          <p className="body-text text-light">
+            <a href="https://www.youtube.com/@sohyphae" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+          </p>
+        </div>
       </div>
       <p 
         className="animation-attr">Home section animation based on cluster growth code by <a href="https://github.com/kirupa/kirupa/tree/master" target="_blank" rel="noopener noreferrer" >kirupa</a>. 
