@@ -1,6 +1,6 @@
 :root {
   /* --section-light: #fffcfc99; */
-  --section-light: #fffcfc;
+  --section-light: #f2e4e3;
   --logo-gradient-1: #785f50;
   --logo-gradient-2: #fff5f5;
   --caption-bg: #14020099;
@@ -30,7 +30,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100dvh;
+  height: 100%;
   background-image: url('/tree-upd2.jpg');
   background-size: cover;
   background-position: center;
@@ -40,7 +40,7 @@ body {
 /* Sections */
 
 .section {
-  min-height: 100dvh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,14 +56,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100dvh;
+  height: 100vh;
 }
 
 #canvas {
   /* border: 2px red solid; */
   position: absolute;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
 }
 
 .logo h1 {
@@ -74,6 +74,7 @@ body {
   margin: 0;
   line-height: 0.9;
   text-align: center;
+  z-index: 1;
 }
 
 .logo-clip-4000 {
@@ -142,7 +143,7 @@ span {
 }
 
 .about-img {
-  height: 100dvh;
+  height: 100vh;
 }
 
 @media (max-width: 900px) {
@@ -179,26 +180,26 @@ span {
 }
 
 .vertical-video {
-  height: 96dvh;
-  width: 53dvh;
-  margin-bottom: 5dvh;
+  height: 96vh;
+  width: 53vh;
+  margin-bottom: 5vh;
   /* top | right | bottom | left */
-  margin: 0 2.5dvh 5dvh 2.5dvh;
+  margin: 0 2.5vh 5vh 2.5vh;
 }
 
 .horizontal-video {
-  height: 45dvh;
+  height: 45vh;
   width: 600px;
-  margin: 0 2.5dvh 5dvh 2.5dvh;
+  margin: 0 2.5vh 5vh 2.5vh;
 }
 
 @media (max-width: 568px) {
   .horizontal-video {
-    max-height: 50dvh;
+    max-height: 50vh;
     width: 90vw;
   }
   .vertical-video {
-    height: 80dvh;
+    height: 80vh;
     width: 90vw;
   }
 }
@@ -207,7 +208,7 @@ span {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-bottom: 10dvh;
+  margin-bottom: 10vh;
 }
 
 .image-container img {
@@ -286,8 +287,13 @@ span {
 .contact-links-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
 }
+
+.contact-links-container p {
+  padding-inline: 1em;
+  font-size: 2em;
+}  
 
 .ia-outer{
   position: relative;
@@ -426,20 +432,20 @@ a:hover {
 
 /* Layout utilities */
 
-.padding-bottom-10dvh {
-  padding-bottom: 10dvh;
+.padding-bottom-10vh {
+  padding-bottom: 10vh;
 }
 
-.margin-top-20dvh {
-  margin-top: 20dvh;
+.margin-top-20vh {
+  margin-top: 20vh;
 }
 
-.margin-top-10dvh {
-  margin-top: 10dvh;
+.margin-top-10vh {
+  margin-top: 10vh;
 }
 
-.margin-bottom-5dvh {
-  margin-bottom: 5dvh;
+.margin-bottom-5vh {
+  margin-bottom: 5vh;
 }
 
 /* todo links */
