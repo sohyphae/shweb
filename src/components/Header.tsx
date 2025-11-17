@@ -1,10 +1,10 @@
 import React from 'react';
-import ClusterGrowth from './ClusterGrowth';
+// import ClusterGrowth from './ClusterGrowth';
 
 const Header: React.FC = () => {
   return (
     <section id="header" className="header">
-      <ClusterGrowth />
+      {/* <ClusterGrowth /> */}
       <div className="logo logo-clip-4000">
         <h1>
             <span>S</span>
