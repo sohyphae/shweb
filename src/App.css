@@ -148,6 +148,10 @@ span {
   justify-content: center;
 }
 
+.about-img {
+  height: 100vh;
+}
+
 @media (max-width: 900px) {
   .about-container {
     flex-wrap: wrap;
@@ -157,10 +161,10 @@ span {
     width: 96vw;
     padding-top: 2em;
   }
-}
-
-.about-img {
-  height: 100vh;
+  .about-img {
+    width: 100vw;
+    height: auto;
+  }
 }
 
 /* Media */

@@ -1,4 +1,4 @@
-import AppBar from './components/AppBar';
+// import AppBar from './components/AppBar';
 import About from './components/About';
 import Background from './components/Background';
 import Contact from './components/Contact';
@@ -18,7 +18,7 @@ const theme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <AppBar/>
+      {/* <AppBar/> */}
       <Background />
       <Header />
       <About />
