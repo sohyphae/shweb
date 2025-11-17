@@ -1,5 +1,6 @@
 :root {
-  --section-light: #fffcfc99;
+  /* --section-light: #fffcfc99; */
+  --section-light: #fffcfc;
   --logo-gradient-1: #785f50;
   --logo-gradient-2: #fff5f5;
   --caption-bg: #14020099;
