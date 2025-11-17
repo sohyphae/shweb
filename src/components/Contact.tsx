@@ -5,9 +5,9 @@ import { FaYoutube } from "react-icons/fa";
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact" className="section section-dark">
+    <section id="contact" className="section">
       <div className="info">
-        <h2 className="section-header text-light">Contact</h2>
+        <h2 className="section-header text-mid-light">Contact</h2>
         <p className="body-text text-light">
           Contact me in the usual way!
         </p>

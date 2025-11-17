@@ -56,12 +56,13 @@ export default function ResponsiveAppBar() {
             anchorEl={anchorElNav}
             open={Boolean(anchorElNav)}
             onClose={handleCloseNavMenu}
+            disableScrollLock={true}
             sx={{
                 '& .MuiPaper-root': {
                 // backgroundColor: '#1F090399',
                 backdropFilter: 'blur(8px)',
                 background: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0))',
-                color: '#feeaea',
+                color: '#ae9b9b',
                 },
             }}
           >
@@ -75,7 +76,7 @@ export default function ResponsiveAppBar() {
         {/* Desktop Menu */}
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
-            <Button key={page.id} color="inherit" style={{color: "#feeaea"}} onClick={() => handleScrollTo(page.id)}>
+            <Button key={page.id} color="inherit" style={{color: "#ae9b9b"}} onClick={() => handleScrollTo(page.id)}>
               {page.name}
             </Button>
           ))}
