@@ -30,10 +30,13 @@ export default function ResponsiveAppBar() {
 
   return (
     <AppBar 
-      position="sticky" 
-      sx={{ 
-        background: '#ffffff00',
-        backdropFilter: 'blur(16px)',
+      position="fixed" 
+      sx={{
+        // bar 
+        top: 0,
+        background: 'linear-gradient(to bottom, #0c050399, rgba(0,0,0,0.05))',
+        boxShadow: 'none',
+        backdropFilter: 'blur(20px)',
         '&::after': {
           content: '""',
           position: 'absolute',
@@ -41,15 +44,14 @@ export default function ResponsiveAppBar() {
           left: 0,
           width: '100%',
           height: '100%',
-          // background: '#ffffff00',
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0))',
+          // background: 'linear-gradient(to bottom, #0c050399, rgba(0,0,0,0.05))',
           pointerEvents: 'none',
         }, 
       }}
     >
       <Toolbar sx={{ justifyContent: 'flex-end' }}>
         <Box sx={{ display: { xs: 'flex', md: 'none' }  }}>
-          <IconButton style={{color: "#feeaea"}} onClick={handleOpenNavMenu}>
+          <IconButton style={{color: "#e6d5d5ff"}} onClick={handleOpenNavMenu}>
             <MenuIcon />
           </IconButton>
           <Menu
@@ -59,10 +61,10 @@ export default function ResponsiveAppBar() {
             disableScrollLock={true}
             sx={{
                 '& .MuiPaper-root': {
-                // backgroundColor: '#1F090399',
+                backgroundColor: '#1F090395',
                 backdropFilter: 'blur(8px)',
-                background: 'linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0))',
-                color: '#ae9b9b',
+                // background: 'linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0))',
+                color: '#e6d5d5ff',
                 },
             }}
           >
@@ -76,7 +78,7 @@ export default function ResponsiveAppBar() {
         {/* Desktop Menu */}
         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
           {pages.map((page) => (
-            <Button key={page.id} color="inherit" style={{color: "#ae9b9b"}} onClick={() => handleScrollTo(page.id)}>
+            <Button key={page.id} color="inherit" style={{color: "#e6d5d5ff"}} onClick={() => handleScrollTo(page.id)}>
               {page.name}
             </Button>
           ))}

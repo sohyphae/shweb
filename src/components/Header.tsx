@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   return (
     <section id="header" className="header">
       <ClusterGrowth />
-      <div className="logo logo-clip-4000 margin-bottom-15vh">
+      <div className="logo logo-clip-4000 margin-bottom-5vh">
         <h1>
             <span>S</span>
             <span>O</span>

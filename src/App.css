@@ -43,22 +43,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .section-light {
-  border: 2px blue solid;
-  background-color: #fffcfc;
-  /* background-color: var(--section-light); */
+  background-color: var(--section-light);
 }
-
-/* .section-dark {
-} */
 
 /* Header */
 
 .header {
-  border: 2px green solid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +59,7 @@ body {
 }
 
 #canvas {
-  border: 2px red solid;
+  /* border: 2px red solid; */
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -120,9 +113,9 @@ span {
   }
 }
 
-/* Shared */
+/* About */
 
-.info {
+.about-text {
   /* border: 1px blue solid; */
   display: flex;
   flex-direction: column;
@@ -132,8 +125,6 @@ span {
   margin-left: 1em;
   margin-right: 1em;
 }
-
-/* About */
 
 .about-container{
   /* border: 1px red solid; */
@@ -260,13 +251,32 @@ span {
 
 /* Live */
 
+#live {
+  justify-content: center;
+}
+
 .live-container {
   padding: 5em;
   text-align: center;
-  vertical-align: middle;
+  vertical-align: middle;  
 }
 
 /* Contact */
+
+.contact-text {
+  margin-top: 7em;
+  text-align: center;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+  margin-top: 10em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
 
 .contact-links-container {
   display: flex;
@@ -423,8 +433,8 @@ a:hover {
   margin-top: 10vh;
 }
 
-.margin-bottom-15vh {
-  margin-bottom: 15vh;
+.margin-bottom-5vh {
+  margin-bottom: 5vh;
 }
 
 /* todo links */

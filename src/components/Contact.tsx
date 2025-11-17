@@ -6,7 +6,7 @@ import { FaYoutube } from "react-icons/fa";
 const Contact: React.FC = () => {
   return (
     <section id="contact" className="section">
-      <div className="info">
+      <div className="contact-text">
         <h2 className="section-header text-mid-light">Contact</h2>
         <p className="body-text text-light">
           Contact me in the usual way!
@@ -41,7 +41,7 @@ const Contact: React.FC = () => {
             <span>A</span>
         </h1>
       </div>
-      <div className="info">  
+      <div className="contact-info">  
         <p className="body-text text-light margin-top-5vh">
           But if you're not on the micelial network, here are some other ways to reach me :-)
         </p>
