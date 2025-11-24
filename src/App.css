@@ -4,7 +4,7 @@
   --logo-gradient-2: #fff5f5;
   --caption-bg: #14020099;
   --text-light: #ae9b9b;
-  --text-mid-light: #775656;
+  --text-mid-light: #866666;
   --text-mid-dark: #4d1313;
   --text-dark: #260F09;
   --a-dark: #4d1313;
@@ -112,6 +112,14 @@ span {
 
 /* About */
 
+.about-container{
+  /* border: 1px red solid; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 96vw;
+}
+
 .about-text {
   /* border: 1px blue solid; */
   display: flex;
@@ -121,14 +129,6 @@ span {
   padding-top: 2em;
   margin-left: 1em;
   margin-right: 1em;
-}
-
-.about-container{
-  /* border: 1px red solid; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 96vw;
 }
 
 .about-img-container {
@@ -143,17 +143,21 @@ span {
 
 @media (max-width: 900px) {
   .about-container {
+    flex-direction: column-reverse;
     flex-wrap: wrap;
     height: auto;
   }
   .about-img-container {
     width: 96vw;
-    padding-top: 2em;
   }
   .about-img {
     width: 100vw;
     height: auto;
   }
+  .about-text {
+  padding-top: 0em;
+  padding-bottom: 4em;
+}
 }
 
 /* Media */
