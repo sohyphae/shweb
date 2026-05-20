@@ -54,8 +54,8 @@ const ClusterGrowth: React.FC = () => {
 
     // Function to draw a single cell
     function drawCell(x: number, y: number) {
-      // ctx.fillStyle = "#00176c05";
-      ctx.fillStyle = "#0124a405";
+      // ctx.fillStyle = "#0124a405";
+      ctx.fillStyle = "#013a2507";
       let xPos = Math.round(x * totalOffset - cellSize / 2);
       let yPos = Math.round(y * totalOffset - cellSize / 2)
       ctx.fillRect(xPos, yPos, cellSize, cellSize);

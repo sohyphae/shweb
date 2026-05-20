@@ -117,48 +117,65 @@ span {
   /* border: 1px red solid; */
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  width: 96vw;
-}
-
-.about-text {
-  /* border: 1px blue solid; */
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  max-width: 800px;
-  padding-top: 2em;
-  margin-left: 1em;
-  margin-right: 1em;
+  justify-content: space-between;
+  width: 100vw;
 }
 
 .about-img-container {
   display: flex;
+  width: 60vw;
+  height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
 .about-img {
-  height: 100vh;
+  max-height: 100vh;
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
 }
 
-@media (max-width: 900px) {
+.about-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 40vw;
+  padding-top: 2em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+@media (max-width: 1150px) {
   .about-container {
-    flex-direction: column-reverse;
     flex-wrap: wrap;
-    height: auto;
+    justify-content: center;
   }
   .about-img-container {
-    width: 96vw;
+    height: auto;
   }
   .about-img {
     width: 100vw;
-    height: auto;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
   }
   .about-text {
-  padding-top: 0em;
-  padding-bottom: 4em;
+    width: 100vw;
+    padding-top: 0em;
+    padding-bottom: 4em;
+  }
+  .about-container h2 {
+    margin-top: 1em;
+  }
 }
+
+/* push subject into frame as img becomes portrait */
+@media (max-width: 900px) {
+  .about-img {
+    width: 150vw;
+    height: 80vh;
+    object-fit: cover; 
+    object-position: -5% 50%; 
+  }
 }
 
 /* Media */
@@ -371,6 +388,13 @@ span {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.2em;
+}
+
+.sub-header-text {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 200;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
 }
 
 .body-text {
