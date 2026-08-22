@@ -14,7 +14,7 @@ const About: React.FC = () => {
             Bristol-based organic electronica & live loops artist, making nature-entangled music
           </p>
           <p className="body-text text-dark">
-            Classical pianist turned electronic music enthusiast, Sophie uses shimmering synths and soaring vocals to weave an impressionistic story of how connection with nature, embracing sensitivity, and finding kindred good souls on the dancefloor will win over disconnection and accelerationism.
+            Classical pianist turned electronic musician, Sophie uses shimmering synths and soaring vocals to weave an impressionistic story of how connection with nature, embracing sensitivity, and finding kindred good souls on the dancefloor will win over disconnection and accelerationism.
           </p>
           <p className="body-text text-dark">
             Sophie creates her improvisational organic electronica live by programming multiple synthesised sounds to follow and respond to her piano melody, while also controlling a loopstation with her feet, generating rich, evolving textures that bloom outwards in real time. With the tactile intimacy of the piano, together with ethereal vocal loops, curious earthy lyrics, and sounds sampled from nature, she invites listeners into a world where electronics and ecology intertwine.

@@ -6,7 +6,7 @@ const Live: React.FC = () => {
       <div className="live-container">
         <h2 className="section-header text-mid-dark">Live Dates</h2>
         <h2 className="dates-header text-mid-dark">Upcoming</h2>
-        <p className="body-text text-dark">29th August 2026: Shambala Festival, Compass - 11:30am</p>
+        <p className="body-text text-dark">29th August 2026: <a href="https://www.shambalafestival.org/2026/act/sophie-hyphaes-mycelial-futurism/" target="_blank" rel="noopener noreferrer"> Sophie Hyphae's Mycelial Futurism</a> at Shambala Festival, Compass Presents Stage - 11:30am</p>
         <p className="body-text text-dark">12th September 2026: Cafe No. 5, Bristol - 3pm</p>
         <h2 className="dates-header text-mid-dark">Past</h2>
         <p className="body-text text-dark">5th July 2026: Not A Cult Festival</p>
