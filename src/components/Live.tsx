@@ -6,10 +6,11 @@ const Live: React.FC = () => {
       <div className="live-container">
         <h2 className="section-header text-mid-dark">Live Dates</h2>
         <h2 className="dates-header text-mid-dark">Upcoming</h2>
-        <p className="body-text text-dark">3rd-6th July 2026: Not A Cult Festival</p>
-        <p className="body-text text-dark">25th July 2026: Windsor and Eton Pride</p>
-        <p className="body-text text-dark">27-30th August 2026: Shambala Festival</p>
+        <p className="body-text text-dark">29th August 2026: Shambala Festival, Compass - 11:30am</p>
+        <p className="body-text text-dark">12th September 2026: Cafe No. 5, Bristol - 3pm</p>
         <h2 className="dates-header text-mid-dark">Past</h2>
+        <p className="body-text text-dark">5th July 2026: Not A Cult Festival</p>
+        <p className="body-text text-dark">25th July 2026: Windsor and Eton Pride</p>
         <p className="body-text text-dark">1st-4th May 2026: Insieme Festival</p>
         <p className="body-text text-dark">18th April 2026: Dubber's End Spring Fiesta</p>
         <p className="body-text text-dark">18th December 2025: The Canteen, Bristol (The Mixed Dips)</p>
