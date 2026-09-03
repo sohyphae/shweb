@@ -13,15 +13,10 @@ const Media: React.FC = () => {
   return (
     <section id="media" className="section section-dark">
       <h2 className="section-header text-mid-light margin-top-20vh padding-bottom-10vh">Media</h2>
+        <div className="large-video-wrapper">
+          <iframe className="video-large" src="https://www.youtube.com/embed/qdsArDVSolA?si=gkoH97vDpEvzy6af" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
         <div className="video-wrapper">
-          <iframe 
-            className="vertical-video" 
-            src="https://www.youtube.com/embed/b_kp38jqi8Q" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
           <iframe 
             className="vertical-video" 
             src="https://www.youtube.com/embed/_saSVDwrL78" 
@@ -32,7 +27,7 @@ const Media: React.FC = () => {
           </iframe>
           <iframe 
             className="vertical-video" 
-            src="https://www.youtube.com/embed/QXM9njrUV_g" 
+            src="https://www.youtube.com/embed/b_kp38jqi8Q" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
@@ -41,6 +36,14 @@ const Media: React.FC = () => {
           <iframe 
             className="vertical-video" 
             src="https://www.youtube.com/embed/zRQJjN4cHiM?start=20&" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <iframe 
+            className="vertical-video" 
+            src="https://www.youtube.com/embed/QXM9njrUV_g" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 

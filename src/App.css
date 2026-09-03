@@ -189,11 +189,26 @@ span {
   margin-top: 3em;
 }
 
+.large-video-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+  padding-bottom: 12vh;
+}
+
 .video-wrapper {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; 
+}
+
+.video-large {
+  width: calc(100% - 5vh); /* account for margins */
+  max-width: 1280px;
+  height: auto; /* keep yt vid shape */
+  aspect-ratio: 16 / 9; /* keep yt vid shape */     
+  margin: 0 2.5vh 5vh 2.5vh;
 }
 
 .vertical-video {
