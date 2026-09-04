@@ -114,7 +114,7 @@ span {
 /* About */
 
 .about-container{
-  /* border: 1px red solid; */
+  /* border: 2px red solid; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -122,6 +122,7 @@ span {
 }
 
 .about-img-container {
+  /* border: 2px orange solid; */
   display: flex;
   width: 60vw;
   height: 100vh;
@@ -130,6 +131,7 @@ span {
 }
 
 .about-img {
+    /* border: 2px yellow solid; */
   max-height: 100vh;
   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
   mask-image: linear-gradient(to right, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
@@ -148,28 +150,32 @@ span {
 @media (max-width: 1150px) {
   .about-container {
     flex-wrap: wrap;
-    justify-content: center;
   }
   .about-img-container {
+    align-items: flex-start;
     height: auto;
+    width: 100%;
   }
   .about-img {
-    width: 100vw;
+    width: 100%;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
   }
   .about-text {
-    width: 100vw;
+    width: 100%;
     padding-top: 0em;
     padding-bottom: 4em;
   }
   .about-container h2 {
     margin-top: 1em;
   }
-}
+} 
 
-/* push subject into frame as img becomes portrait */
+/* push subject into frame as img becomes portrait  */
 @media (max-width: 900px) {
+  .about-img-container {
+    overflow: hidden;
+  }  
   .about-img {
     width: 150vw;
     height: 80vh;
