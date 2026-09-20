@@ -1,5 +1,5 @@
 import React from 'react';
-import sh from '../assets/sophie-hyphae-pic-26.jpeg';
+import sh from '../assets/sophie-hyphae-pic-26-squooshd.jpg';
 
 const About: React.FC = () => {
   return (
