@@ -19,6 +19,9 @@ const Media: React.FC = () => {
         <div className="large-video-wrapper">
           <iframe className="video-large" src="https://www.youtube.com/embed/qdsArDVSolA?si=gkoH97vDpEvzy6af" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+        <div className="large-video-wrapper">
+          <iframe className="video-large" src="https://www.youtube.com/embed/QsmDTuXdVh0?si=GFfCFdZPp1rSYImz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
       <div className="image-container">        
         <div className="caption-container">
           <img src={insieme} alt="Sophie Hyphae, playing synth at Insieme Festival" />
