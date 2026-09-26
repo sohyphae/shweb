@@ -11,6 +11,9 @@ import nac from '../assets/hyphae-not-a-cult-sqr.jpeg';
 import smoky from '../assets/smokytentacles.jpg';
 import zb from '../assets/zbdy-w.jpeg';
 import may4th from '../assets/may4th.jpeg';
+import synthLights from '../assets/synth-lights-shamb26.jpeg';
+import sophTomShamb from '../assets/soph-tom-shamb26.jpeg';
+import cafe5 from '../assets/cafe5-4-sqr.jpeg';
 
 const Media: React.FC = () => {
   return (
@@ -22,7 +25,10 @@ const Media: React.FC = () => {
         <div className="large-video-wrapper">
           <iframe className="video-large" src="https://www.youtube.com/embed/QsmDTuXdVh0?si=GFfCFdZPp1rSYImz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
-      <div className="image-container">        
+        <div className="large-video-wrapper">
+          <iframe className="video-large" src="https://www.youtube.com/embed/ZVbNfwFSl_w?si=BCeX1C1gQbNfGDbi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      <div className="image-container">   
         <div className="caption-container">
           <img src={insieme} alt="Sophie Hyphae, playing synth at Insieme Festival" />
           <p className="caption text-light">Insieme Festival 2026</p>
@@ -32,9 +38,21 @@ const Media: React.FC = () => {
           <p className="caption text-light">Not a Cult Festival 2026</p>
         </div>
         <div className="caption-container">
+          <img src={synthLights} alt="Sophie Hyphae's Mycelial Futurism at Shambala" />
+          <p className="caption text-light">Sophie Hyphae's Mycelial Futurism</p>
+        </div>
+        <div className="caption-container">
+          <img src={sophTomShamb} alt="Sophie Hyphae and Tom Trumpet at Shambala" />
+          <p className="caption text-light">Sophie and Tom Trumpet at Shambala</p>
+        </div>
+        <div className="caption-container">
           <img src={pride} alt="Sophie Hyphae, singing at Windsor and Eton Pride 2026" />
           <p className="caption text-light">Windsor and Eton Pride 2026</p>
         </div>
+        <div className="caption-container">
+          <img src={cafe5} alt="Sophie Hyphae at Cafe 5, Bristol" />
+          <p className="caption text-light">Cafe 5, Bristol</p>
+        </div>   
         <div className="caption-container">
           <img src={shamb2} alt="Sophie Hyphae, live loops artist, at Shambala Festival, as part of the Mixed Dips" />
           <p className="caption text-light">Shambala Festival 2025, photo: Jana Rumley</p>
