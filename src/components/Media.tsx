@@ -14,140 +14,72 @@ import may4th from '../assets/may4th.jpeg';
 import synthLights from '../assets/synth-lights-shamb26.jpeg';
 import sophTomShamb from '../assets/soph-tom-shamb26.jpeg';
 import cafe5 from '../assets/cafe5-4-sqr.jpeg';
+import LargeVideo from './media/LargeVideo';
+import CaptionedImage, { type CaptionedImageProps } from './media/CaptionedImage';
+import VerticalVideo from './media/VerticalVideo';
+import YouTubeEmbed from './media/YouTubeEmbed';
+
+const largeVideos: string[] = [
+  'https://www.youtube.com/embed/qdsArDVSolA?si=gkoH97vDpEvzy6af',
+  'https://www.youtube.com/embed/QsmDTuXdVh0?si=GFfCFdZPp1rSYImz',
+  'https://www.youtube.com/embed/Dh5fNdeWS-w?si=jvJJ4ynPsJWFuX0S',
+  'https://www.youtube.com/embed/ZVbNfwFSl_w?si=BCeX1C1gQbNfGDbi',
+];
+
+const images: CaptionedImageProps[] = [
+  { src: insieme, alt: 'Sophie Hyphae, playing synth at Insieme Festival', caption: 'Insieme Festival 2026' },
+  { src: nac, alt: 'Sophie Hyphae, singing at Not a Cult Festival', caption: 'Not a Cult Festival 2026' },
+  { src: synthLights, alt: "Sophie Hyphae's Mycelial Futurism at Shambala", caption: "Sophie Hyphae's Mycelial Futurism" },
+  { src: sophTomShamb, alt: 'Sophie Hyphae and Tom Trumpet at Shambala', caption: 'Sophie and Tom Trumpet at Shambala' },
+  { src: pride, alt: 'Sophie Hyphae, singing at Windsor and Eton Pride 2026', caption: 'Windsor and Eton Pride 2026' },
+  { src: cafe5, alt: 'Sophie Hyphae at Cafe 5, Bristol', caption: 'Cafe 5, Bristol' },
+  { src: shamb2, alt: 'Sophie Hyphae, live loops artist, at Shambala Festival, as part of the Mixed Dips', caption: 'Shambala Festival 2025, photo: Jana Rumley' },
+  { src: physic, alt: 'Sophie Hyphae at the Chelsea Physic Garden Summer Lates, playing piano improvisations and nature-entangled songs', caption: 'Chelsea Physic Garden Summer Lates' },
+  { src: pianoJungle, alt: "Sophie Hyphae's nature-entangled piano!", caption: 'Nature-entagled piano music in progress...' },
+  { src: cgeS, alt: 'Sophie Hyphae, playing synthesizer music at a summer street party in Bristol', caption: 'A Bristol summer street party' },
+  { src: zb, alt: 'Sophie Hyphae, playing synthesizer at Bridge Farm, Bristol', caption: 'Celebration at Bridge Farm' },
+  { src: shamb3, alt: 'Sophie Hyphae, singing and playing synth at Shambala Festival, as part of the Mixed Dips', caption: 'Shambala Festival 2025' },
+  { src: shamb1, alt: 'Sophie Hyphae, playing synth at Shambala Festival, as part of the Mixed Dips', caption: 'Shambala Festival 2025, photo: Jana Rumley' },
+  { src: smoky, alt: 'Sophie Hyphae live loops artist playing music at a party in the Smoky Tentacles festival tent', caption: 'Celebration in the Smoky Tentacles' },
+  { src: may4th, alt: 'Sophie Hyphae live loops artist piano improvisations at May the Fourth Fest', caption: 'May the Fourth Fest', isOdd: true },
+];
+
+const verticalVideos: string[] = [
+  'https://www.youtube.com/embed/uGb6IIn17BE',
+  'https://www.youtube.com/embed/_saSVDwrL78',
+  'https://www.youtube.com/embed/5LDwZCKOhYA',
+  'https://www.youtube.com/embed/b_kp38jqi8Q',
+  'https://www.youtube.com/embed/zRQJjN4cHiM?start=20&',
+  'https://www.youtube.com/embed/QXM9njrUV_g',
+];
+
+const horizontalVideos: string[] = [
+  'https://www.youtube.com/embed/NReyLj_dGN8?si=RoSzeOBOyxSQ4x-s',
+  'https://www.youtube.com/embed/gpwFDJ-2zmA?si=ibig8rQd3lQXG4db',
+];
 
 const Media: React.FC = () => {
   return (
     <section id="media" className="section section-dark">
       <h2 className="section-header text-mid-light margin-top-20vh padding-bottom-10vh">Media</h2>
-        <div className="large-video-wrapper">
-          <iframe className="video-large" src="https://www.youtube.com/embed/qdsArDVSolA?si=gkoH97vDpEvzy6af" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div className="large-video-wrapper">
-          <iframe className="video-large" src="https://www.youtube.com/embed/QsmDTuXdVh0?si=GFfCFdZPp1rSYImz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div className="large-video-wrapper">
-          <iframe className="video-large" src="https://www.youtube.com/embed/Dh5fNdeWS-w?si=jvJJ4ynPsJWFuX0S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-        <div className="large-video-wrapper">
-          <iframe className="video-large" src="https://www.youtube.com/embed/ZVbNfwFSl_w?si=BCeX1C1gQbNfGDbi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-      <div className="image-container">   
-        <div className="caption-container">
-          <img src={insieme} alt="Sophie Hyphae, playing synth at Insieme Festival" />
-          <p className="caption text-light">Insieme Festival 2026</p>
-        </div>
-        <div className="caption-container">
-          <img src={nac} alt="Sophie Hyphae, singing at Not a Cult Festival" />
-          <p className="caption text-light">Not a Cult Festival 2026</p>
-        </div>
-        <div className="caption-container">
-          <img src={synthLights} alt="Sophie Hyphae's Mycelial Futurism at Shambala" />
-          <p className="caption text-light">Sophie Hyphae's Mycelial Futurism</p>
-        </div>
-        <div className="caption-container">
-          <img src={sophTomShamb} alt="Sophie Hyphae and Tom Trumpet at Shambala" />
-          <p className="caption text-light">Sophie and Tom Trumpet at Shambala</p>
-        </div>
-        <div className="caption-container">
-          <img src={pride} alt="Sophie Hyphae, singing at Windsor and Eton Pride 2026" />
-          <p className="caption text-light">Windsor and Eton Pride 2026</p>
-        </div>
-        <div className="caption-container">
-          <img src={cafe5} alt="Sophie Hyphae at Cafe 5, Bristol" />
-          <p className="caption text-light">Cafe 5, Bristol</p>
-        </div>   
-        <div className="caption-container">
-          <img src={shamb2} alt="Sophie Hyphae, live loops artist, at Shambala Festival, as part of the Mixed Dips" />
-          <p className="caption text-light">Shambala Festival 2025, photo: Jana Rumley</p>
-        </div>
-        <div className="caption-container">
-          <img src={physic} alt="Sophie Hyphae at the Chelsea Physic Garden Summer Lates, playing piano improvisations and nature-entangled songs" />
-          <p className="caption text-light">Chelsea Physic Garden Summer Lates</p>
-        </div>
-        <div className="caption-container">
-          <img src={pianoJungle} alt="Sophie Hyphae's nature-entangled piano!" />
-          <p className="caption text-light">Nature-entagled piano music in progress...</p>
-        </div>
-        <div className="caption-container">
-          <img src={cgeS} alt="Sophie Hyphae, playing synthesizer music at a summer street party in Bristol" />
-          <p className="caption text-light">A Bristol summer street party</p>
-        </div>
-        <div className="caption-container">
-          <img src={zb} alt="Sophie Hyphae, playing synthesizer at Bridge Farm, Bristol" />
-          <p className="caption text-light">Celebration at Bridge Farm</p>
-        </div>
-        <div className="caption-container">
-          <img src={shamb3} alt="Sophie Hyphae, singing and playing synth at Shambala Festival, as part of the Mixed Dips" />
-          <p className="caption text-light">Shambala Festival 2025</p>
-        </div>
-        <div className="caption-container">
-          <img src={shamb1} alt="Sophie Hyphae, playing synth at Shambala Festival, as part of the Mixed Dips" />
-          <p className="caption text-light">Shambala Festival 2025, photo: Jana Rumley</p>
-        </div>
-        <div className="caption-container">
-          <img src={smoky} alt="Sophie Hyphae live loops artist playing music at a party in the Smoky Tentacles festival tent" />
-          <p className="caption text-light">Celebration in the Smoky Tentacles</p>
-        </div>
-        <div className="caption-container">
-          <img src={may4th} alt="Sophie Hyphae live loops artist piano improvisations at May the Fourth Fest" />
-          <p className="caption text-light">May the Fourth Fest</p>
-        </div>
-        {/* may need to restore className="odd-img" on final img for set less divisible */}
+      {largeVideos.map((src) => (
+        <LargeVideo key={src} src={src} />
+      ))}
+      <div className="image-container">
+        {images.map((image) => (
+          <CaptionedImage key={image.src} {...image} />
+        ))}
       </div>
-        <div className="video-wrapper">
-          <iframe 
-            className="vertical-video"
-            src="https://www.youtube.com/embed/uGb6IIn17BE" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-          <iframe 
-            className="vertical-video" 
-            src="https://www.youtube.com/embed/_saSVDwrL78" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-          <iframe 
-            className="vertical-video" 
-            src="https://www.youtube.com/embed/5LDwZCKOhYA" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-          <iframe 
-            className="vertical-video" 
-            src="https://www.youtube.com/embed/b_kp38jqi8Q" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-          <iframe 
-            className="vertical-video" 
-            src="https://www.youtube.com/embed/zRQJjN4cHiM?start=20&" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-          <iframe 
-            className="vertical-video" 
-            src="https://www.youtube.com/embed/QXM9njrUV_g" 
-            title="YouTube video player" frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            referrerpolicy="strict-origin-when-cross-origin" 
-            allowfullscreen>
-          </iframe>
-        </div>
-        <div className="video-wrapper">
-          <iframe className="horizontal-video" src="https://www.youtube.com/embed/NReyLj_dGN8?si=RoSzeOBOyxSQ4x-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <iframe className="horizontal-video" src="https://www.youtube.com/embed/gpwFDJ-2zmA?si=ibig8rQd3lQXG4db" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+      <div className="video-wrapper">
+        {verticalVideos.map((src) => (
+          <VerticalVideo key={src} src={src} />
+        ))}
+      </div>
+      <div className="video-wrapper">
+        {horizontalVideos.map((src) => (
+          <YouTubeEmbed key={src} className="horizontal-video" src={src} />
+        ))}
+      </div>
     </section>
   );
 };
