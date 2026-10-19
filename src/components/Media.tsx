@@ -94,10 +94,26 @@ const Media: React.FC = () => {
         </div>
         {/* may need to restore className="odd-img" on final img for set less divisible */}
       </div>
-              <div className="video-wrapper">
+        <div className="video-wrapper">
+          <iframe 
+            className="vertical-video"
+            src="https://www.youtube.com/embed/uGb6IIn17BE" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
           <iframe 
             className="vertical-video" 
             src="https://www.youtube.com/embed/_saSVDwrL78" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+          </iframe>
+          <iframe 
+            className="vertical-video" 
+            src="https://www.youtube.com/embed/5LDwZCKOhYA" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             referrerpolicy="strict-origin-when-cross-origin" 
